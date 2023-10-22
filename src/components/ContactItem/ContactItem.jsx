@@ -1,4 +1,4 @@
-import { Component } from 'react';
+
 import {ItemEl, ContactData, ContactName, ContactNumber, ContactDelete } from './ContactItem.styled'
 
 export const ContactItem =({contact, onDeleteContact}) => {

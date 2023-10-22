@@ -1,9 +1,8 @@
-import { Component } from "react";
+
 import {ContactItem} from '../ContactItem/ContactItem';
 import {ListUl, ListDiv} from './ContactList.styled'
-export class ContactList extends Component {
-    render(){
-        const {contacts, onDeleteContact } = this.props;
+export const ContactList = ({contacts, onDeleteContact}) => {
+         
         return (
           <ListDiv> 
             <ListUl>
@@ -19,5 +18,5 @@ export class ContactList extends Component {
             </ListUl>
             </ListDiv> 
         )
-    }
+    
 };

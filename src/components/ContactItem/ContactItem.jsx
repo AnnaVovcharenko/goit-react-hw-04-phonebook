@@ -1,26 +1,21 @@
 import { Component } from 'react';
 import {ItemEl, ContactData, ContactName, ContactNumber, ContactDelete } from './ContactItem.styled'
 
-export class ContactItem extends Component {
-  render() {
-    const {
-      contact: { id, name, number },
-      onDeleteContact,
-    } = this.props;
-
+export const ContactItem =({contact, onDeleteContact}) => {
+ 
     return (
       <ItemEl>
         <ContactData>
-          <ContactName>{name}</ContactName>
-          <ContactNumber>{number}</ContactNumber>
+          <ContactName>{contact.name}</ContactName>
+          <ContactNumber>{contact.number}</ContactNumber>
         </ContactData>
         <ContactDelete 
         type="button" 
         name="delete"
-        onClick={() => onDeleteContact(id)}>
+        onClick={() => onDeleteContact(contact.id)}>
           &times;
         </ContactDelete>
       </ItemEl>
     );
-  }
+  
 }

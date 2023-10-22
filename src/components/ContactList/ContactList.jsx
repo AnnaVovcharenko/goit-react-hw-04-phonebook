@@ -1,5 +1,5 @@
 
-import ContactItem from '../ContactItem/ContactItem';
+import {ContactItem} from '../ContactItem/ContactItem';
 import {ListUl, ListDiv} from './ContactList.styled'
 export const ContactList = ({contacts, onDeleteContact}) => {
          
